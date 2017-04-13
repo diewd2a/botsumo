@@ -1,0 +1,2 @@
+# botsumo
+bot
