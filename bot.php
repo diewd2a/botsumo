@@ -18,8 +18,11 @@ if (!is_null($events['events'])) {
 			$id = $event['message']['id'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
-			if($text=='Diew'){
-				$text = 'คุณเก่งมากๆๆเลย ';	
+			if($text=='SUMO'){
+				$text = 'You WIN!!! ';	
+			}
+			else{
+				$text = 'You Lost. ';	
 			}
 			// Build message to reply back
  		}
