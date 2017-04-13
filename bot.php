@@ -1,5 +1,5 @@
 <?php
-$access_token = 'ZZBpFxnTKtJQtRFjwwuHm+fFqRPk8Vw+bvFh6HtfsaNNkpc4F3+yRUPqFMUEgyaoWpbjQcvJ9+OXQSu89T5hpc5/Gqqmivcwv7LUip9smTviGg6vwZjT+KomW0QuJ4wZsJ3hqXsoDz9iYD4UxBnidQdB04t89/1O/w1cDnyilFU=';
+$access_token = 'o+0XI615ecKKd7PFkawswYt7rzkw0NBDQjZb2gmNa9UyuEZCD3At57hi8ZRD9Walb8HrQgrBxlaEOpiU0YViWmWOBGjuEzpVyyk5yg7FpG6UmURz9JjJ0XPkTITsogrvG0smuLhZ8Akz028vAm+K1gdB04t89/1O/w1cDnyilFU=';
 // Get POST body content
 $content = file_get_contents('php://input');
 //print_r($content);
@@ -24,9 +24,10 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
  		}
 	}
+	//'text' => $text.'| msg_id->'.$id.' | UID -> '.$event['source']['userId']
 	$messages = [
 				'type' => 'text',
-				'text' => $text.'| msg_id->'.$id.' | UID -> '.$event['source']['userId']
+				'text' => $text
 			    ];
 
 			// Make a POST Request to Messaging API to reply to sender
