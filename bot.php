@@ -18,11 +18,28 @@ if (!is_null($events['events'])) {
 			$id = $event['message']['id'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
+			$codem = explode(' ',$text);
 			if($text=='OMC'){
 				$text = 'You WIN!';	
 			}
+			else if($codem[0]=='User'){
+ 				$access_token = 'ftnj1K6SBDQnLoJbTHwFaKoMooMOS7Ax7zCRIV4Rfm6I3z6Qds';
+				$url = '210.1.58.130/~demomlm/app/v1.0/index.php/member/dashboard/';
+				
+				$headers = array('Authorization: Bearer ' . $access_token);
+				
+				$ch = curl_init($url);
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+				curl_setopt($ch, CURLOPT_POST, 1);
+				curl_setopt($ch, CURLOPT_POSTFIELDS,
+							"mem_id=".$codem[1]);
+				$text = curl_exec($ch);
+				curl_close($ch);
+			}
 			else{
-				$text = 'You Lost. ';	
+				$text = 'No Msg. ';	
 			}
 			// Build message to reply back
  		}
