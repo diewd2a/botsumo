@@ -23,6 +23,8 @@ if (!is_null($events['events'])) {
 				$text = 'You WIN!';	
 			}
 			else if($codem[0]=='User'){
+								$text = $codem[0].' =>  '.$codem[1];	
+/* 
  				$access_token = 'ftnj1K6SBDQnLoJbTHwFaKoMooMOS7Ax7zCRIV4Rfm6I3z6Qds';
 				$url = '210.1.58.130/~demomlm/app/v1.0/index.php/member/dashboard/';
 				
@@ -34,13 +36,16 @@ if (!is_null($events['events'])) {
 				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 				curl_setopt($ch, CURLOPT_POST, 1);
 				curl_setopt($ch, CURLOPT_POSTFIELDS,
-							"mem_id=".$codem[1]);
-				$text = curl_exec($ch);
+							"mem_id=0000001");
+				$result = curl_exec($ch);
 				curl_close($ch);
+				
+				//echo $result;
+				$jsonde = json_decode($result, false, 512, JSON_UNESCAPED_UNICODE); */
+				//print_r($jsonde);	
 			}
 			else{
-				$text = '
-[{"data_profile":{"mem_id":"0000001 ( Demo)","position":"DI","honor":"ST","type":"Center","mdate":"2017-07-27","sp_name":"","upa_name":"","status":"\u0e04\u0e49\u0e32\u0e07\u0e2a\u0e48\u0e07\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23 ()"},"data_pv":{"per_score":{"per_pv":"157,010","link_detail":"http:\/\/210.1.58.130\/~demomlm\/member\/index.php?sessiontab=4&sub=38&cmc="},"Balance\/Month":"246,740 \/ October","Maintain balance1 (October)":"<font color=#0000FF><b>Active <\/b><b>(10,000)<\/b><\/font>","Maintain balance2 (November)":"<font color=#0000FF><b>Active <\/b><b>(10,000)<\/b><\/font>","PV Left old":"1,166,150","PV Right old":"0","PV Left new":{"pv":"7,630","link_detail":"http:\/\/210.1.58.130\/~demomlm\/member\/index.php?sessiontab=5&sub=116&lr=1&cmc="},"PV Right new":{"pv":"30","link_detail":"http:\/\/210.1.58.130\/~demomlm\/member\/index.php?sessiontab=5&sub=116&lr=2&cmc="},"PV Left sum":"1,173,780","PV Right sum":"30"}}]';	
+				$text = 'No Msgs. ';	
 			}
 			// Build message to reply back
  		}
