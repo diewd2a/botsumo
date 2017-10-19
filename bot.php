@@ -43,16 +43,15 @@ if (!is_null($events['events'])) {
 				
 				//echo $result;
 				$jsonde = json_decode($result, true, 512, JSON_UNESCAPED_UNICODE);
-				$text = 'รหัสสมาชิก	 = '.$jsonde[0]['data_profile']['mem_id'].'
-				';
-				$text .= 'ประเภทสมาชิก		 = '.$jsonde[0]['data_profile']['type'].'
+				$text = 'รหัสสมาชิก	 = '.$jsonde[0]['data_profile']['mem_id'];
+				/* $text .= 'ประเภทสมาชิก		 = '.$jsonde[0]['data_profile']['type'].'
 				';
 				$text .= 'วันที่สมัคร		 = '.$jsonde[0]['data_profile']['mdate'].'
 				';
 				$text .= 'คะแนนส่วนตัว		 = '.$jsonde[0]['data_pv']['per_score']['per_pv'].'
 				';
 				$text .= 'รายละเอียด	 = '.$jsonde[0]['data_pv']['per_score']['link_detail'].'0000001'.'
-				';
+				'; */
 //echo $text;	
 				
 			}
