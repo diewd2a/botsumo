@@ -1,5 +1,5 @@
 <?php
-$access_token = 'o+0XI615ecKKd7PFkawswYt7rzkw0NBDQjZb2gmNa9UyuEZCD3At57hi8ZRD9Walb8HrQgrBxlaEOpiU0YViWmWOBGjuEzpVyyk5yg7FpG6UmURz9JjJ0XPkTITsogrvG0smuLhZ8Akz028vAm+K1gdB04t89/1O/w1cDnyilFU=';
+$access_token = 'onZk0lMu38UjCMFxwuNWG68FUhMol4e0/lFcFNuMHxNF5V0bzxwh+kBDRQ7KS8w3WqZwUileaIi8jOzD/zq2mBHgLCI/KrXAdejcb4ssr+0emsS/uqn9b1qxepRfsLEcdWDgefH/E/3uU/ryHMfN6gdB04t89/1O/w1cDnyilFU=';
 // Get POST body content
 $content = file_get_contents('php://input');
 //print_r($content);
@@ -18,8 +18,8 @@ if (!is_null($events['events'])) {
 			$id = $event['message']['id'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
-			if($text=='SUMO'){
-				$text = 'You WIN!!! ';	
+			if($text=='OMC'){
+				$text = 'You WIN!';	
 			}
 			else{
 				$text = 'You Lost. ';	
