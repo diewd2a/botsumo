@@ -10,11 +10,11 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS,
-            "mem_id=0000001");
+            "mem_id=".$_GET['mem_id']);
 $result = curl_exec($ch);
 curl_close($ch);
 
-echo $result;
+//echo $result;
 $jsonde = json_decode($result, true, 512, JSON_UNESCAPED_UNICODE);
 $text = 'รหัสสมาชิก	 = '.$jsonde[0]['data_profile']['mem_id'].'
 				';
@@ -24,7 +24,7 @@ $text = 'รหัสสมาชิก	 = '.$jsonde[0]['data_profile']['mem_id'
 				';
 				$text .= 'คะแนนส่วนตัว		 = '.$jsonde[0]['data_pv']['per_score']['per_pv'].'
 				';
-				$text .= 'รายละเอียด	 = '.$jsonde[0]['data_pv']['per_score']['link_detail'].'0000001'.'
+				$text .= 'รายละเอียด	 = '.$jsonde[0]['data_pv']['per_score']['link_detail'].$_GET['mem_id'].'
 				';
 echo $text;				
 
