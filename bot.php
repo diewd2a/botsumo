@@ -26,7 +26,7 @@ if (!is_null($events['events'])) {
 				//$text = $codem[0].' =>  '.$codem[1];	
 
  				$access_token = 'ftnj1K6SBDQnLoJbTHwFaKoMooMOS7Ax7zCRIV4Rfm6I3z6Qds';
-$url = '210.1.58.130/~demomlm/app/v1.0/index.php/member/dashboard/';
+$url = 'http://210.1.58.130/~demomlm/app/v1.0/index.php/member/dashboard/';
 
 $headers = array('Authorization: Bearer ' . $access_token);
 
