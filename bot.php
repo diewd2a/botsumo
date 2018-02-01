@@ -38,8 +38,16 @@ if (!is_null($events['events'])) {
 	$messages = [
 				'type' => 'text',
 				'text' => $text
-			    ];
-
+	];
+	
+	if($text=='Dashboard'){
+		$messages = [
+				'type' => 'image',
+				"originalContentUrl" => 'https://image.makewebeasy.com/makeweb/0/3FO8EY8YM/DefaultData/Deashboard_1.png',
+				"previewImageUrl"  => 'https://image.makewebeasy.com/makeweb/r_400x400/3FO8EY8YM/DefaultData/Deashboard_1.png'
+				];
+	
+	}
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
@@ -62,3 +70,4 @@ if (!is_null($events['events'])) {
 			exit();
 }
 //echo 'OK';
+?>
