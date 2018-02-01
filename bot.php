@@ -53,6 +53,30 @@ if (!is_null($events['events'])) {
 				];
 	
 	}
+	if($text=='Promotion'){
+		$messages = [
+				'type' => 'image',
+				"originalContentUrl" => 'https://image.makewebeasy.com/makeweb/0/3FO8EY8YM/DefaultData/promotion.png',
+				"previewImageUrl"  => 'https://image.makewebeasy.com/makeweb/r_400x400/3FO8EY8YM/DefaultData/promotion.png'
+				];
+	
+	}
+	if($text=='CommissionA'){
+		$messages = [
+				'type' => 'image',
+				"originalContentUrl" => 'https://image.makewebeasy.com/makeweb/0/3FO8EY8YM/DefaultData/COMA_1.png',
+				"previewImageUrl"  => 'https://image.makewebeasy.com/makeweb/r_400x400/3FO8EY8YM/DefaultData/COMA_1.png'
+				];
+	
+	}
+	if($text=='CommissionB'){
+		$messages = [
+				'type' => 'image',
+				"originalContentUrl" => 'https://image.makewebeasy.com/makeweb/0/3FO8EY8YM/DefaultData/COMB_1.png',
+				"previewImageUrl"  => 'https://image.makewebeasy.com/makeweb/0/3FO8EY8YM/DefaultData/COMB_1.png'
+				];
+	
+	}
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
