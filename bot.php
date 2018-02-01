@@ -75,6 +75,40 @@ if (!is_null($events['events'])) {
 				];
 	
 	}
+	if($text=='Promotionall'){
+		$messages = [
+				"type"=> "template",
+			    "altText"=> "This is a buttons template",
+			   "template"=> array(
+			   		"type" => "buttons",
+				  "thumbnailImageUrl"=> "https://image.makewebeasy.com/makeweb/0/3FO8EY8YM/DefaultData/COMB_1.png",
+				  "imageAspectRatio" => "rectangle",
+				  "imageSize" => "cover",
+				  "imageBackgroundColor" => "#FFFFFF",
+				  "title" => "Menu",
+				  "text" => "Please select",
+				  "actions" => array(
+					  array(
+						"type" => "postback",
+						"label" => "Buy",
+						"data" => "http://210.1.58.130/~demomlm/action=buy&itemid=123"
+					  ),
+					  array(
+						"type" => "postback",
+						"label" => "Add to cart",
+						"data" => "http://210.1.58.130/~demomlm/action=add&itemid=123"
+					  ),
+					 array(
+						"type" => "uri",
+						"label" => "View detail",
+						"uri" => "http://210.1.58.130/~demomlm"
+					  )
+			   	 	)
+				 ),
+				 
+				];
+	
+	}
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
