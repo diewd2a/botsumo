@@ -75,7 +75,7 @@ if (!is_null($events['events'])) {
 				];
 	
 	}
-	if($text=='Promotionall'){
+	if($text=='Promotiona'){
 		$messages = [
 				"type"=> "template",
 			    "altText"=> "This is a buttons template",
