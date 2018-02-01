@@ -28,11 +28,9 @@ if (!is_null($events['events'])) {
  				//$text = 'รหัสสมาชิก	 = '.$jsonde[0]['data_profile']['mem_id'];
  				
 			}
-			if($text=='Dashboard'){
-				$text = 'Dashboard';	
-			}
+			 
 			else{
-				$text = 'No Msgs. ';	
+				$text = $text;	
 			}
 			
 			
